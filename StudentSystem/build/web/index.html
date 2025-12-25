@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffe6f2, #ffd6e6);
+            padding: 50px 0;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 102, 179, 0.4);
+            border: 2px solid #ff99cc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #cc0066;
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        label {
+            font-weight: bold;
+            color: #cc0066;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 90%;
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #ff99cc;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #ff66b3;
+            box-shadow: 0 0 8px rgba(255,102,179,0.4);
+            outline: none;
+        }
+
+        .button-style {
+            width: 95%;           
+            padding: 14px;        
+            background: linear-gradient(to right, #ff66b3, #e60073);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2><i class="fa-solid fa-user"></i> Personal Profile</h2>
+
+    <form action="ProfileServlet" method="POST">
+
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Student ID:</label>
+        <input type="text" name="studentID" placeholder="Enter your student ID" required>
+
+        <label>Program:</label>
+        <input type="text" name="program" placeholder="Enter your program" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Hobbies:</label>
+        <input type="text" name="hobbies" placeholder="Enter your hobbies" required>
+
+        <label>Short Introduction:</label>
+        <textarea name="intro" rows="4" placeholder="Write a short intro..." required></textarea>
+
+        
+        <button type="submit" class="button-style">
+            <i class="fa-solid fa-paper-plane"></i> Submit
+        </button>
+
+        <a href="home.html" class="button-style">
+            <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+
+    </form>
+</div>
+
+</body>
+</html>
